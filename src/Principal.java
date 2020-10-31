@@ -2,11 +2,13 @@ import java.util.Scanner;
 public class Principal {
 
 	public static void main(String[] args) {
-		operaciones();	
-		meses();
+		ejercicio1y2();	
+		ejercicio6();
+		ejercicio7();
+		ejercicio9y10();
 }
 
-private static void operaciones(){
+private static void ejercicio1y2(){
 	Scanner sc = new Scanner(System.in);
 	System.out.println("Ingrese un número entero");
 	int valorA = sc.nextInt();
@@ -34,7 +36,9 @@ private static void operaciones(){
 	}
   }
 }
-	private static void meses(){
+	
+
+private static void ejercicio6(){
 		 Scanner sc = new Scanner(System.in);
 		 short mes;
 		 
@@ -75,6 +79,36 @@ private static void operaciones(){
 	} else {
 		System.out.println("El día tiene 31 días");
 	}
+}
+	
+	
+private static void ejercicio7() {
+		
+		int i;
+//		for(i = 0; i < 200; i++) {
+//			if((i % 2) == 0) { //decimos que si el resto de la división es 2, el número es par
+	for (i = 0; i < 200; i = i + 2) { //de este modo ahorras el if, sumando de a 2 en for
+		System.out.println(i); 
+		}
 	}
 
-}
+	
+private static void ejercicio9y10() {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Ingrese varios números enteros y un número negativo para finalizar.");
+		long acumulador = 0; //long es el entero para números grandes
+		int numA;
+		int máximo = 0;
+		numA = sc.nextInt();
+		while(numA >= 0) {
+			acumulador = acumulador + numA;
+			if(numA > máximo) {
+				máximo = numA;
+			}
+			numA = sc.nextInt();
+		}	
+		System.out.println("La suma es: " + acumulador);
+		System.out.println("El máximo es: " + máximo);
+		}
+	  }
