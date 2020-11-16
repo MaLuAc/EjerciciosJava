@@ -3,9 +3,10 @@ public class Principal {
 
 	public static void main(String[] args) {
 		ejercicio1y2();	
+		ejercicio4y5();
 		ejercicio6();
 		ejercicio7();
-		ejercicio9y10();
+		ejercicio910y11();
 }
 
 private static void ejercicio1y2(){
@@ -36,7 +37,33 @@ private static void ejercicio1y2(){
 	}
   }
 }
+
+private static void ejercicio4y5(){
+	Scanner sc = new Scanner(System.in);
+	System.out.println("Ingrese un número entero entre 1 y 10");
+	int nota1 = sc.nextInt();
+	int nota2 = sc.nextInt();
+	int nota3 = sc.nextInt();
+	int promedio = nota1 + nota2 + nota3;
 	
+	if ((nota1 <=10) && (nota2 <=10) && (nota3 <=10) && (nota1 >= 0) && (nota2 >= 0) && (nota3 >= 0)){
+	System.out.println("El promedio es: " + promedio/3);
+   
+	if ((promedio>=4 && nota1 >=4) && (nota2 >=4) && (nota3 >=4)){
+		System.out.println("El alumno está aprobado");	
+	if  ((nota3==10 || promedio/3>=8)){
+	    System.out.println("El alumno ha promocionado");
+	} else {
+		System.out.println("El alumno no ha promocionado");
+	}
+  } else {
+  System.out.println("El alumno está desaprobado"); 
+  }
+	
+} else {
+		 System.out.println("Valor incorrecto.");
+ }	
+}
 
 private static void ejercicio6(){
 		 Scanner sc = new Scanner(System.in);
@@ -93,7 +120,7 @@ private static void ejercicio7() {
 	}
 
 	
-private static void ejercicio9y10() {
+private static void ejercicio910y11() {
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Ingrese varios números enteros y un número negativo para finalizar.");
